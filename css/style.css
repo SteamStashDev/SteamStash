@@ -1,0 +1,67 @@
+body {
+    color: #fff;
+    background: #1b2838;
+    font-family: Inter;
+}
+
+.layout {
+    width: 100%;
+    display: grid;
+    grid:
+      "settings" auto
+      "header" auto
+      "buttons" auto
+      "paydesc" auto
+      / auto;
+    gap: 0% 0%;
+  
+    justify-content: start;
+    align-content: start;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .settings { grid-area: settings; position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; }
+  .header { grid-area: header; text-align: center; font-size: 12px; margin-top: 5em;}
+  .hint {color: #969696; font-size: 12px;}
+  .buttons { grid-area: buttons; display: block; margin: 1em 0 1em 0;}
+  .paydesc { grid-area: paydesc; font-size: 12px; border-radius: 10px; padding: 0 30px 0 30px; margin: 0 0 15px; color:#969696; background-color: rgba(0, 0, 0, 0.2); border: 1px solid rgba(0, 0, 0, 0);} 
+  .paydesc p { margin: 0 0 15px; font-size: 10px; line-height: 1.25em;}
+  .tether { display: flex; justify-content: center; align-items: center; padding: 15px;}
+
+  #outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: block;
+    padding: 3px;
+}
+.inner button
+{
+    width: 150px;
+}
+.button{
+    border-radius: 2px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #D2E885 !important;
+    background: #a4d007;
+    background: -webkit-linear-gradient(top, #a4d007 5%, #536904 95%);
+    background: linear-gradient(to bottom, #a4d007 5%, #536904 95%);
+}
+    #img1 {
+    width: 15px;
+}
+    #img2 {
+    width: 100px;
+}
+
+    #img3 {
+    width: 25px;
+    margin-right: 10px;
+}
