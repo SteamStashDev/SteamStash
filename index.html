@@ -11,8 +11,8 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
 	<meta name="apple-mobile-web-app-title" content="STASH" />
 	<link rel="manifest" href="favicon/site.webmanifest" />
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-	<script src="scripts/app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+	<script src=""></script>
 	<title>Steam Stash</title>
 </head>
 <body>
@@ -25,12 +25,9 @@
 		</div>
 		<div class="buttons">
 		<div id="outer">
-			<div class="inner"><button class="button">Пополнить баланс</button></a></div>
-			<div class="inner"><a href="pages/game.html"><button class="button">Купить игру</button></a></div>
-			<div class="inner"><a href="pages/region.html"><button class="button">Сменить регион</button></a></div>
-			<button class="button" id="showAlert">Show Alert</button>
-    		<button class="button" id="showConfirm">Show Confirm</button>
-    		<button class="button" id="showPopup">Show Popup</button>
+			<div class="inner"><button class="button" id="showAlert">Пополнить баланс</button></a></div>
+			<div class="inner"><button class="button" id="showConfirm">Купить игру</button></a></div>
+			<div class="inner"><button class="button" id="showPopup">Сменить регион</button></a></div>
 		  </div>
 		</div>
 		<div class="paydesc">
@@ -42,6 +39,49 @@
 				<p>• Если ваши средства находятся на бирже, выбирайте сеть BEP20 или BSC когда отправляете перевод.</p>
 				<p>• Если вы используете криптокошелёк, то для успешного проведения транзакции USDT в сети BEP20 (BSC) вам потребуется нативный токен этой сети для оплаты комиссии, в данном случае - токен BNB.</p>
 		</div>
+		<script>
+			let tg = window.Telegram.WebApp;
+			tg.expand();
+	
+			document.getElementById('showAlert').addEventListener('click', function() {
+				tg.showAlert("This is an alert!");
+			});
+	
+			document.getElementById('showConfirm').addEventListener('click', function() {
+				tg.showConfirm("Are you sure?", function(confirmed) {
+					if (confirmed) {
+						tg.showAlert("You confirmed!");
+					} else {
+						tg.showAlert("You cancelled!");
+					}
+				});
+			});
+	
+			document.getElementById('showPopup').addEventListener('click', function() {
+				tg.showPopup({
+					title: "Popup Title",
+					message: "This is a popup message",
+					buttons: [
+						{id: "ok", type: "ok", text: "OK"},
+						{id: "cancel", type: "cancel", text: "Cancel"}
+					]
+				}, function(buttonId) {
+					tg.showAlert("You clicked: " + buttonId);
+				});
+			});
+	
+			tg.MainButton.setText("Main Action").show().onClick(function(){
+				tg.showAlert("Main button clicked!");
+			});
+	
+			tg.BackButton.show().onClick(function(){
+				tg.showAlert("Back button clicked!");
+			});
+	
+			tg.onEvent('mainButtonClicked', function(){
+				tg.HapticFeedback.impactOccurred('light');
+			});
+		</script>
 	</section>
 </body>
 </html>
