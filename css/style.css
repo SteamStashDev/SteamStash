@@ -14,7 +14,7 @@ body {
       "paydesc" auto
       / auto;
     grid: 0% 0%;
-    align-content: start;
+    justify-items: center;
     align-items: center;
 }
 
