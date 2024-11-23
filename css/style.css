@@ -13,19 +13,20 @@ body {
       "buttons" auto
       "paydesc" auto
       / auto;
-    grid: 0% 0%;
     place-items: center center;
 }
 
 .settings { grid-area: settings; position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; }
 .header { grid-area: header; text-align: center; font-size: 12px; margin-top: 4em;}
 .hint {color: #969696; font-size: 12px;}
-.buttons { grid-area: buttons; margin: 1em 0 1em 0;}
+.buttons { grid-area: buttons; margin: 10px 0 10px 0;}
 .paydesc { grid-area: paydesc; font-size: 12px; border-radius: 10px; padding: 0 30px 0 30px; color:#969696; background-color: rgba(0, 0, 0, 0.2); border: 1px solid rgba(0, 0, 0, 0);} 
-.paydesc p { margin: 0 0 15px; font-size: 10px; line-height: 1.25em;}
 .tether { display: flex; justify-content: center; align-items: center; padding: 15px;}
+.paydesc p { margin: 0 0 15px; font-size: 10px; line-height: 1.25em;}
 
 .button {
+    width: 150px;
+    margin: 3px;
     border-radius: 4px;
     border: none;
     padding: 10px;
@@ -42,8 +43,6 @@ body {
     background: #84A406;
 }
 
-#outer { width:100%; text-align: center; }
-.inner { padding: 3px; }
 .inner button { width: 150px; }
 
 #img1 { width: 15px; }
