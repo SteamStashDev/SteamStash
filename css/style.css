@@ -4,6 +4,14 @@ body {
     font-family: Inter;
 }
 
+a {
+    text-decoration: none;
+}
+
+#img1 { width: 15px; }
+#img2 { width: 100px; }
+#img3 { width: 25px; margin-right: 10px; }
+
 .container {
     width: 100%;
     display: grid;
@@ -32,7 +40,6 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
-    text-decoration: none;
     color: #D2E885;
     background: #799905;
     background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
@@ -43,7 +50,3 @@ body {
     color:#fff;
     background: #84A406;
 }
-
-#img1 { width: 15px; }
-#img2 { width: 100px; }
-#img3 { width: 25px; margin-right: 10px; }
