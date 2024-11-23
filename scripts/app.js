@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
         tg.expand();
         tg.BackButton.show().onClick(function(){
+            Telegram.WebApp.onEvent('backButtonClicked', callback)
             tg.showAlert("Back button clicked!");
         });
 
