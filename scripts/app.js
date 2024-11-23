@@ -1,5 +1,6 @@
 let tg = window.Telegram.WebApp;
         tg.expand();
+
         document.getElementById('showAlert').addEventListener('click', function() {
             tg.showAlert("This is an alert!");
         });
@@ -38,7 +39,7 @@ let tg = window.Telegram.WebApp;
         tg.onEvent('mainButtonClicked', function(){
             tg.HapticFeedback.impactOccurred('light');
         });
-
+        
 // Получаем и декодируем initData
 let initData = tg.initData || '';
 let initDataUnsafe = tg.initDataUnsafe || {};
