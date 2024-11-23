@@ -15,9 +15,7 @@ body {
       / auto;
     gap: 0% 0%;
   
-    justify-content: start;
     align-content: start;
-    justify-items: center;
     align-items: center;
   }
   
