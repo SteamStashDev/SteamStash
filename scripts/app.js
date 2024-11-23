@@ -19,7 +19,7 @@ let tg = window.Telegram.WebApp;
             return null;
           }
         
-          var appTgVersion = 7.0;
+          var appTgVersion = 8.0;
         
           var initParams = sessionStorageGet('initParams');
           if (initParams) {
