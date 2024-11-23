@@ -43,7 +43,8 @@
 	<script>
         let tg = window.Telegram.WebApp;
         tg.expand();
-
+		tg.BackButton.isVisible(true);
+		
         document.getElementById('showAlert').addEventListener('click', function() {
             tg.showAlert("This is an alert!");
         });
