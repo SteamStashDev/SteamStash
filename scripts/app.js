@@ -1,4 +1,3 @@
-<script>
 			let tg = window.Telegram.WebApp;
 			tg.expand();
 	
@@ -40,4 +39,3 @@
 			tg.onEvent('mainButtonClicked', function(){
 				tg.HapticFeedback.impactOccurred('light');
 			});
-</script>
