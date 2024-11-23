@@ -13,12 +13,12 @@ body {
       "buttons" auto
       "paydesc" auto
       / auto;
-    grid-gap: 10px 0;
+    grid: 0% 0%;
     align-content: start;
     align-items: center;
 }
 
-.settings { grid-area: settings; position: absolute; top: 12px; width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; }
+.settings { grid-area: settings; position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; display: flex; justify-content: center; align-items: center; }
 .header { grid-area: header; text-align: center; font-size: 12px; margin-top: 4em;}
 .hint {color: #969696; font-size: 12px;}
 .buttons { grid-area: buttons; margin: 1em 0 1em 0;}
