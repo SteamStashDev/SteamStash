@@ -64,3 +64,8 @@ a {
     color: #969696;
     background: rgba(0, 0, 0, 0.2);
 }
+
+.sbutton:hover {
+    color:#fff;
+    background: #f7a63d;
+}
