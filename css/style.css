@@ -29,7 +29,7 @@ a {
 .header { grid-area: header; text-align: center; font-size: 10px; margin-top: 60px;}
 .hint {color: #969696; font-size: 12px;}
 .mainbuttons { grid-area: mainbuttons; margin: 10px 0 10px 0;}
-.subbuttons { grid-area: subbuttons; margin: 10px 0 10px 0;}
+.subbuttons { grid-area: subbuttons; margin: 10px 0 0 0;}
 .paydesc { grid-area: paydesc; font-size: 12px; border-radius: 10px; padding: 0 30px 0 30px; color:#969696; background-color: rgba(0, 0, 0, 0.2); border: 1px solid rgba(0, 0, 0, 0);} 
 .tether { display: flex; justify-content: center; align-items: center; padding: 15px;}
 .paydesc p { margin: 0 0 15px; font-size: 10px; line-height: 1.25em;}
@@ -54,7 +54,6 @@ a {
 }
 
 .sbutton {
-    display: inline-block;
     width: 150px;
     margin: 7px;
     border-radius: 4px;
@@ -67,5 +66,6 @@ a {
 
 .sbutton:hover {
     color:#fff;
-    background: #f7a63d;
+    background: -webkit-linear-gradient(top, #f7a63d 5%, #ee6d43 95%);
+    background: linear-gradient(to bottom, #f7a63d 5%, #ee6d43 95%);
 }
